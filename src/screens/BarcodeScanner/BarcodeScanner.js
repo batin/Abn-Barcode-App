@@ -17,6 +17,7 @@ export default function BarcodeScanner() {
     const handleBarCodeScanned = ({ type, data }) => {
         setScanned(true);
         alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+        this.props.navigation.navigate("ProductViewer")
     };
 
     if (hasPermission === null) {
